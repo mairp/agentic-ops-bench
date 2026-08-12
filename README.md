@@ -1,7 +1,10 @@
-# Sovereign Agent Bench
+# Agentic Ops Bench
 
 A small, honest benchmark for the question I actually care about: **can models I run
 myself, on one consumer GPU, do my day job as well as hosted frontier models can?**
+
+**[Read the report (PDF)](benchmark-report.pdf)** — leaderboard, quality-vs-latency
+trade-off, per-domain breakdown, and the harness comparison.
 
 My day job is agentic operations work — AIOps alert correlation, NetDevOps config
 compilation and drift planning, HPC scheduling, inference serving, RAG pipelines,
