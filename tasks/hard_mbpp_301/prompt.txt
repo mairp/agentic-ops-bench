@@ -1,0 +1,4 @@
+This directory is a small Python project with a FAILING test suite that encodes the spec below. Implement the required function(s) in solution.py so that the hidden tests pass. Run `pytest -q` yourself and iterate until ALL tests pass. Do NOT modify or delete any test_*.py file. When all tests pass, stop.
+
+SPEC:
+Write a function to find the depth of a dictionary.

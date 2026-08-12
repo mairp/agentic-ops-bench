@@ -1,0 +1,8 @@
+{
+  "tier": "hard",
+  "category": "code_hard",
+  "src_id": "mbpp_100",
+  "source": "mbppplus",
+  "entry_point": "next_smallest_palindrome",
+  "n_asserts": 15
+}

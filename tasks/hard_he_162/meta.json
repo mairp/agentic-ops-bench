@@ -1,0 +1,8 @@
+{
+  "tier": "hard",
+  "category": "code_hard",
+  "src_id": "he_162",
+  "source": "humanevalplus",
+  "entry_point": "string_to_md5",
+  "n_asserts": 15
+}

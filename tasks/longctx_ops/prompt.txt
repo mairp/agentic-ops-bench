@@ -1,0 +1,1 @@
+`ops.py` is a large registry of 40 handlers; each `op_k(x)` is supposed to return `x + k`, but exactly ONE handler is wrong and the test suite (`test_longctx_ops.py`) fails. Locate the single broken handler in the file and fix it. Run `pytest -q` until it passes. Do NOT modify any test_*.py file and do NOT rewrite the whole file — find the one defect. Stop when green.

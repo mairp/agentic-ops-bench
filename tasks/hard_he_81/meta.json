@@ -1,0 +1,8 @@
+{
+  "tier": "hard",
+  "category": "code_hard",
+  "src_id": "he_81",
+  "source": "humanevalplus",
+  "entry_point": "numerical_letter_grade",
+  "n_asserts": 15
+}

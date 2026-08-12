@@ -1,0 +1,1 @@
+This is a small multi-module Python package (`store/`) with a FAILING test suite (`test_multifile_store.py`). Orders come out wrong. Find and fix the bug so all tests pass. The defect involves how modules pass data to each other — you will need to read more than one file. Run `pytest -q` and iterate until ALL tests pass. Do NOT modify any test_*.py file. Stop when green.

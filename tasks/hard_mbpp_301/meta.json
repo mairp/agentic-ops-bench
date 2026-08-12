@@ -1,0 +1,8 @@
+{
+  "tier": "hard",
+  "category": "code_hard",
+  "src_id": "mbpp_301",
+  "source": "mbppplus",
+  "entry_point": "dict_depth",
+  "n_asserts": 15
+}

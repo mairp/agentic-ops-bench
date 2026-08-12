@@ -1,0 +1,66 @@
+{
+  "_comment": [
+    "Copy to models.json and edit. models.json is gitignored: it is the only file",
+    "that knows your endpoints, model names and credentials.",
+    "",
+    "Placeholders usable in harness cmd/env and model env:",
+    "  {prompt} {cwd} {model} {timeout_s} {timeout_ms}",
+    "",
+    "'models[*].models' maps a model key to whatever name each harness uses for it,",
+    "so the same weights can be addressed differently by different agent CLIs."
+  ],
+
+  "harnesses": {
+    "harness-a": {
+      "_comment": "An agent CLI that takes an absolute prompt and runs in $PWD.",
+      "cmd": ["your-agent-cli", "-p", "--allow-tools", "--", "{prompt}"],
+      "env": {
+        "AGENT_BASE_URL": "http://127.0.0.1:8080",
+        "AGENT_API_KEY": "set-me",
+        "AGENT_MODEL": "{model}",
+        "AGENT_MAX_OUTPUT_TOKENS": "16000"
+      }
+    },
+    "harness-b": {
+      "_comment": "An agent CLI that takes an explicit working directory.",
+      "cmd": ["your-other-agent", "-p", "--cwd", "{cwd}", "--model", "{model}",
+              "--autonomous", "--autonomous-max-turns", "16",
+              "--autonomous-timeout-ms", "{timeout_ms}", "--", "{prompt}"],
+      "env": {}
+    }
+  },
+
+  "models": {
+    "local-dense": {
+      "kind": "local",
+      "models": {"harness-a": "my-dense-model", "harness-b": "my-dense-model"},
+      "env": {"AGENT_MAX_CONTEXT_TOKENS": "98304"}
+    },
+    "local-moe": {
+      "kind": "local",
+      "models": {"harness-a": "my-moe-model", "harness-b": "my-moe-model"},
+      "env": {"AGENT_MAX_CONTEXT_TOKENS": "131072"}
+    },
+    "hosted-frontier": {
+      "kind": "remote",
+      "models": {"harness-a": "some-hosted-model", "harness-b": "some-hosted-model"},
+      "env": {"AGENT_MAX_CONTEXT_TOKENS": "200000"}
+    }
+  },
+
+  "judge": {
+    "_comment": "Optional. Any OpenAI-compatible chat endpoint. Omit to score pass/fail only.",
+    "base_url": "http://127.0.0.1:4000/v1",
+    "model": "your-judge-model",
+    "api_key_env": "JUDGE_API_KEY",
+    "max_tokens": 512
+  },
+
+  "gpu_cooldown": {
+    "_comment": "For single-GPU hosts that hot-swap local models. Needs nvidia-smi.",
+    "enabled": true,
+    "idle_mib": 2000,
+    "max_wait_s": 180,
+    "settle_s": 15
+  }
+}

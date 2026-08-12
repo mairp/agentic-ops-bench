@@ -1,0 +1,8 @@
+{
+  "tier": "hard",
+  "category": "code_hard",
+  "src_id": "mbpp_299",
+  "source": "mbppplus",
+  "entry_point": "max_aggregate",
+  "n_asserts": 15
+}
