@@ -106,5 +106,5 @@ will eventually save you from publishing a wrong number.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Task content is original or derived from the public
+Apache-2.0 — see [LICENSE](LICENSE). Task content is original or derived from the public
 EvalPlus datasets.
